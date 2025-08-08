@@ -9,8 +9,8 @@ export default function Home_comp() {
         <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-5 py-24">
           
           {/* Text Section */}
-          <div className="lg:flex-grow lg:w-1/2 w-full flex flex-col lg:items-start lg:text-left mb-16 lg:mb-0 text-center animate-fadeIn">
-            <h1 className="title-font sm:text-5xl text-4xl mb-6 font-bold text-gray-900">
+          <div className="lg:flex-grow lg:w-1/2 mr-2 w-full flex flex-col lg:items-start lg:text-left mb-16 lg:mb-0 text-center animate-fadeIn">
+            <h1 className="title-font sm:text-5xl text-4xl mb-6 font-bold text-indigo-700">
               About Me
             </h1>
             <p className="mb-8 leading-relaxed text-lg text-gray-700">
@@ -27,7 +27,7 @@ export default function Home_comp() {
             <img
               className="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
               alt="hero"
-              src="/image/him.png"
+              src="/image/him.jpg"
             />
           </div>
         </div>

@@ -114,7 +114,7 @@ useEffect(() => {
         <div className="container mx-auto flex flex-col md:flex-row items-center px-5">
           
           {/* Text */}
-          <div className="lg:flex-grow md:w-1/2 lg:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 text-center md:text-left animate-fadeIn">
+          <div className="lg:flex-grow md:w-1/2 lg:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 text-center  animate-fadeIn">
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
               <h1 className="title-font sm:text-3xl text-2xl mb-6 font-bold text-indigo-700">
                 Chief Editor – School Engineering Magazine
@@ -218,7 +218,7 @@ useEffect(() => {
             <img
               className="object-cover object-center rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
               alt="Engineering Project"
-              src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68"
+              src="/image/cricket.JPEG"
             />
           </div>
         </div>
@@ -247,8 +247,8 @@ useEffect(() => {
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex justify-center animate-fadeInUp">
             <img
               className="object-cover object-center rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
-              alt="Physics Workshop"
-              src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68"
+              alt="Polo Sports"
+              src="/image/polo.JPEG"
             />
           </div>
         </div>

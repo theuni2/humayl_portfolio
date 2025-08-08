@@ -27,12 +27,6 @@ export default function Navbar() {
           <span className="ml-2 text-lg font-semibold text-indigo-600">Humayl Fazal</span>
         </Link>
 
-        {/* Navigation */}
-
-{/* sport competition , projects , research , work ex */}
-
-
-
 
         <nav className="md:ml-auto flex flex-wrap items-center text-sm md:text-base text-indigo-700">
           <Link href="/" className="mr-5 hover:text-black transition">
@@ -54,7 +48,7 @@ export default function Navbar() {
           </Link>
 
           <Link href="/compound_activity#research" className="mr-5 hover:text-black transition">
-            Research
+            Writing
           </Link>
 
           <Link href="/compound_activity#workex" className="mr-5 hover:text-black transition">

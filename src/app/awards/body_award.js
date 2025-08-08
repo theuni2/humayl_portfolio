@@ -56,7 +56,7 @@ export default function Achievements() {
      
 
         <Image
-          src="/image/him.png"
+          src="/image/him.jpg"
           alt="Profile Image"
           width={250}
           height={250}
@@ -71,7 +71,7 @@ export default function Achievements() {
         >
           Visit LinkedIn For More Information
         </a>
-
+{/* 
         <a
           href="https://www.instagram.com/your-profile"
           target="_blank"
@@ -79,7 +79,7 @@ export default function Achievements() {
           className="mb-6 bg-orange-500 mx-auto hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded transition duration-300 w-full text-center md:w-auto"
         >
           Visit Instagram For More Information
-        </a>
+        </a> */}
 
       </div>
 

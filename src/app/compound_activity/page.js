@@ -5,6 +5,7 @@ import Hero from './hero';
 import Slider from './slider'
 import Work_ex from './work_ex';
 import SportsSection from './sports';
+import Gallery from './gallery';
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
 <Slider/>
 <Work_ex/>
 <SportsSection/>
+<Gallery/>
 <Footer/>
     </div>
   )

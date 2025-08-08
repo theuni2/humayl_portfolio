@@ -23,7 +23,7 @@ export default function Footer() {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span className="ml-2 text-lg font-semibold">Humayl Fazal</span>
+          <span className="ml-2 text-lg font-semibold text-indigo-700">Humayl Fazal</span>
         </Link>
 
         {/* Copyright */}

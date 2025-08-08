@@ -22,7 +22,7 @@ Recognized at international competitions in mathematics and science, I thrive on
       </div>
     </div>
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img className="object-cover object-center rounded" alt="hero" src="/image/him.png"/>
+      <img className="object-cover object-center rounded" alt="hero" src="/image/him.jpg"/>
     </div>
   </div>
 </section>

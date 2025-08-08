@@ -11,12 +11,12 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80')",
+          backgroundImage: "url('https://wallpaperaccess.com/full/266471.jpg')",
         }}
       ></div>
 
       {/* Lighter overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Text content */}
       <div className="relative z-10 max-w-2xl px-6">
