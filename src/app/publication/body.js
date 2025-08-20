@@ -60,6 +60,7 @@ export default function Publications() {
                 src={pub.image}
                 alt={pub.title}
                 className="w-full h-full object-cover"
+                unoptimized
               />
             </div>
             <div className="p-6 flex flex-col justify-center md:w-2/3">

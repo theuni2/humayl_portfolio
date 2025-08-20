@@ -162,6 +162,7 @@ export default function Gallery() {
                 width={600}
                 height={400}
                 className="object-cover w-full h-64"
+                unoptimized
               />
             </motion.div>
           ))}
@@ -194,6 +195,7 @@ export default function Gallery() {
                 width={600}
                 height={400}
                 className="object-cover w-full h-64"
+                unoptimized
               />
             </motion.div>
           ))}

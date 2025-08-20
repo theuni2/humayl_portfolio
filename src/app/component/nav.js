@@ -154,7 +154,7 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { label: "HOME", href: "/" },
+    { label: "Home", href: "/" },
     { label: "Projects & Research", href: "/projectnresearch" },
     { label: "Publications", href: "/publication" },
     { label: "Leadership", href: "/leadership" },
