@@ -20,7 +20,7 @@ export default function Publications() {
         { label: "UK: View on Amazon", url: "https://amzn.to/3jbUNSm" },
         { label: "UAE: View on Amazon", url: "https://amzn.to/3eDlizo" },
       ],
-      image: "/image/2.png", // Replace with actual path
+      image: "/image/2.PNG", // Replace with actual path
     },    {
       title: "DC Hydraulics – Dubai College Engineering Magazine",
       description:

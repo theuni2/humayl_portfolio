@@ -94,11 +94,11 @@ export default function ProjectsDetails() {
     {
       id: "fasal-bot",
       title: "Ocean Clean-Up Rover (FASAL BOT)",
-      cover: "/image/sea_rover/img1.jpg",
+      cover: "/image/sea_rover/img1.JPG",
       gallery: [
-        "/image/sea_rover/img2.jpg",
-        "/image/sea_rover/img3.jpg",
-        "/image/sea_rover/img4.jpg",
+        "/image/sea_rover/img2.JPG",
+        "/image/sea_rover/img3.JPG",
+        "/image/sea_rover/img4.JPG",
         // "/projects/fasal-bot/expo.jpg",
       ],
       blurb:

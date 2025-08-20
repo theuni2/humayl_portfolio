@@ -35,12 +35,12 @@ export default function Gallery() {
     // { src: '/images/polo.jpg', alt: 'Water polo match' },
   ];
   const kenken = [
-    { src: '/image/kenken/img1.JPG', alt: 'Rover' },
+    { src: '/image/kenken/img1.jpg', alt: 'Rover' },
     { src: '/image/kenken/img2.JPG', alt: 'Rover' },
     { src: '/image/kenken/img3.JPG', alt: 'Rover' },
     { src: '/image/kenken/img4.JPG', alt: 'Rover' },
     { src: '/image/kenken/img5.JPG', alt: 'Rover' },
-    { src: '/image/kenken/img6.JPG', alt: 'Rover' },
+    { src: '/image/kenken/img6.jpg', alt: 'Rover' },
     // { src: '/images/polo.jpg', alt: 'Water polo match' },
   ];
   const doe = [
@@ -54,10 +54,10 @@ export default function Gallery() {
   ];
   const rubric = [
     { src: '/image/rubric/img1.jpg', alt: 'Rover' },
-    { src: '/image/rubric/img2.jpg', alt: 'Rover' },
-    { src: '/image/rubric/img3.jpg', alt: 'Rover' },
+    { src: '/image/rubric/img2.JPG', alt: 'Rover' },
+    { src: '/image/rubric/img3.JPG', alt: 'Rover' },
   //  { src: '/image/rubric/img4.jpg', alt: 'Rover' },
-    { src: '/image/rubric/img5.jpg', alt: 'Rover' },
+    { src: '/image/rubric/img5.JPG', alt: 'Rover' },
     { src: '/image/rubric/img6.jpg', alt: 'Rover' },
     // { src: '/images/polo.jpg', alt: 'Water polo match' },
   ];
@@ -195,7 +195,6 @@ export default function Gallery() {
                 width={600}
                 height={400}
                 className="object-cover w-full h-64"
-                unoptimized
               />
             </motion.div>
           ))}
