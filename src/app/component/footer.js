@@ -18,12 +18,12 @@ export default function Footer() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            className="w-8 h-8 text-indigo-600"
+            className="w-8 h-8 text-blue-950"
             viewBox="0 0 24 24"
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span className="ml-2 text-lg font-semibold text-indigo-700">Humayl Fazal</span>
+          <span className="ml-2 text-lg font-semibold text-blue-950">Humayl Fazal</span>
         </Link>
 
         {/* Copyright */}

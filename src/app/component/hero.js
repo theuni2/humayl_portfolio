@@ -1,31 +1,36 @@
-import React from 'react'
-
-export default function Hero() {
+export default function AboutMe() {
   return (
-    <div>
-        <section className="text-gray-600 body-font bg-white">
-  <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-        <br className="hidden lg:inline-block"/>readymade gluten
-      </h1>
-      <p className="mb-8 leading-relaxed">
-I’m a passionate STEM student with a strong background in mathematics, physics, engineering, and computer science. My journey blends academic excellence with real-world experience—ranging from fintech and aerospace internships to AI research and hands-on engineering projects. I’ve built innovative solutions like mobility rovers and AI-powered detection models, while also leading STEM clubs, organizing competitions, and publishing creative work.
+    <section className="py-16 px-6 md:px-20 bg-gray-300">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
+        
+        {/* Left: Text */}
+        <div className="flex-1">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-blue-950">About Me</h2>
+          <p className="text-black leading-relaxed mb-4">
+            I’m Humayl Fazal, an A-Level student at Dubai College, pursuing Mathematics, Further Mathematics, Physics, and Chemistry. My passion lies at the intersection of engineering, mathematics, and innovation — areas where curiosity meets practical problem-solving.
+          </p>
+          <p className="text-black leading-relaxed mb-4">
+            From a young age, I’ve been fascinated by how mechanical systems work, whether it’s the precision of an aircraft engine or the efficiency of a rover navigating challenging terrain. That curiosity has grown into hands-on experience: designing prototypes for remote healthcare delivery, exploring aerospace engineering during industry internships, and leading STEM-focused clubs and competitions.
+          </p>
+          <p className="text-black leading-relaxed mb-4">
+            As Head of the Physics & Engineering Society and Co-Founder of the Physics in Motion Club, I lead workshops, mentor peers, and organize events that inspire others to explore STEM. My participation in competitions such as the British Mathematics Olympiad, ISMTF Senior Olympiad, and Stanford Math Challenge has sharpened my problem-solving skills under pressure.
+          </p>
+          <p className="text-black leading-relaxed">
+            Whether it’s showcasing projects at Expo 2020, representing my school’s U19 cricket team, or developing innovative engineering solutions, I’m driven by the same goal: to make an impact through innovation, collaboration, and perseverance.
+          </p>
+        </div>
 
-Recognized at international competitions in mathematics and science, I thrive on solving complex problems and turning ideas into impactful outcomes. Beyond academics, I’m an active varsity athlete and committed community contributor, believing in a balanced approach to growth—both in and out of the lab.
+        {/* Right: Image */}
+        <div className="flex-1 flex justify-center md:justify-end">
+          <img
+            src="/image/him.jpg" // Place your image in public/ folder
+            alt="Humayl Fazal"
+            className="w-full md:w-96 h-auto object-cover rounded-lg shadow-lg"
+          />
+        </div>
 
-
-      </p>
-      <div className="flex justify-center">
-        <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-        <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
       </div>
-    </div>
-    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img className="object-cover object-center rounded" alt="hero" src="/image/him.jpg"/>
-    </div>
-  </div>
-</section>
-    </div>
-  )
+    </section>
+  );
 }
+

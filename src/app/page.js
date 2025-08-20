@@ -2,7 +2,10 @@
 import Navbar from "./component/nav";
 import Footer from "./component/footer";
 import Home_comp from './component/home';
-import Hero from "./component/hero";
+import AboutMe from './component/hero';
+import CoreValues from "./component/core";
+import LeadershipIdentities from "./component/leadershipsec";
+// import Hero from "./component/hero";
 
 export default function Home() {
   return (
@@ -12,7 +15,9 @@ export default function Home() {
 {/* <Hero/> */}
 
 <Home_comp/>
-
+<AboutMe/>
+<CoreValues/>
+<LeadershipIdentities/>
 <Footer/>
     </div>
   );
