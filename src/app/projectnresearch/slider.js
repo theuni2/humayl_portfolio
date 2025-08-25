@@ -1,10 +1,20 @@
 'use client';
 
+
+
+
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Slider() {
   const slides = [
@@ -17,8 +27,8 @@ export default function Slider() {
   ];
 
   return (
-    <div className='bg-gray-50 py-10 px-6 md:px-8' id="projects">
-        <h1 className='text-center text-3xl my-2 md:text-4xl font-bold mb-6 text-blue-950'>Engineering Projects</h1>
+    <div className='bg-[#d6d6d6] py-10 px-6 md:px-8' id="projects">
+        <h1 className={`text-center text-3xl my-2 md:text-4xl font-bold mb-6 text-blue-950 ${ptSerif.className} `}>Engineering Projects</h1>
       <div className="w-full h-screen overflow-hidden relative">
         <Swiper
           spaceBetween={0}
@@ -42,10 +52,10 @@ export default function Slider() {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
-                <h2 className="text-white my-1 text-3xl md:text-4xl font-extrabold drop-shadow-lg">
+                <h2 className={`text-white my-1 text-3xl md:text-4xl font-extrabold drop-shadow-lg ${ptSerif.className} `}>
                   {slide.text}
                 </h2>
-                <p className='text-white text-2xl md:text-3xl font-bold'>
+                <p className={`text-white text-2xl md:text-3xl font-bold ${ptSerif.className} `}>
                     {slide.para}
                 </p>
               </div>

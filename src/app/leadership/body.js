@@ -1,6 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function LeadershipSection() {
   const intro =
@@ -53,7 +59,7 @@ export default function LeadershipSection() {
   };
 
   return (
-    <section id="leadership" className="bg-gray-300 py-10 px-6 md:px-8 ">
+    <section id="leadership" className={`bg-[#d6d6d6] py-10 px-6 md:px-8 ${ptSerif.className} `}>
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +68,7 @@ export default function LeadershipSection() {
         className="max-w-5xl mx-auto text-center"
       >
         <h2 className="text-4xl font-bold tracking-tight text-blue-950">Leadership</h2>
-        <p className="mt-4 text-gray-700 leading-relaxed">{intro}</p>
+        <p className="mt-4 text-[#1a334c] leading-relaxed">{intro}</p>
       </motion.div>
 
       <motion.div
@@ -76,16 +82,16 @@ export default function LeadershipSection() {
           <motion.article
             key={role.title}
             variants={item}
-            className="group relative overflow-hidden rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-shadow"
+            className="group relative overflow-hidden rounded-2xl bg-[#011e35] border border-gray-200 shadow-sm hover:shadow-xl transition-shadow"
           >
             {/* Animated accent bar */}
             <div className="h-1 w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600" />
 
             <div className="p-6">
-              <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+              <h3 className={`text-lg md:text-xl font-semibold text-[#d6d6d6] ${ptSerif.className} `}>
                 {role.title}
               </h3>
-              <p className="mt-3 text-gray-700 leading-relaxed">
+              <p className="mt-3 leading-relaxed text-[#d6d6d6]">
                 {role.description}
               </p>
             </div>

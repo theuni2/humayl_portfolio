@@ -2,6 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function LeadershipIdentities() {
   const identities = [
@@ -22,7 +28,7 @@ export default function LeadershipIdentities() {
   return (
     <section className="py-16 px-6 md:px-20 bg-gray-300">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl text-blue-950 font-bold tracking-wide mb-4">
+        <h2 className={`text-3xl md:text-4xl text-blue-950 font-bold tracking-wide mb-4 ${ptSerif.className} `}>
           Leadership Identities
         </h2>
       </div>
@@ -35,13 +41,15 @@ export default function LeadershipIdentities() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: idx * 0.2 }}
             viewport={{ once: true }}
-            className="bg-white p-8 flex flex-col justify-start rounded-lg shadow-lg h-full hover:shadow-xl transition-shadow duration-300"
+            className="bg-[#011e35] p-8 flex flex-col justify-start rounded-lg shadow-lg h-full hover:shadow-xl transition-shadow duration-300"
           >
-            <h3 className="text-xl font-bold text-black mb-4 mx-auto">{item.title}</h3>
-            <p className="text-black leading-relaxed text-center">{item.text}</p>
+            <h3 className={`text-xl font-bold text-[#d6d6d6] mb-4 mx-auto  ${ptSerif.className} `}>{item.title}</h3>
+            <p className={`text-[#d6d6d6] leading-relaxed text-center ${ptSerif.className} `}>{item.text}</p>
           </motion.div>
         ))}
       </div>
+
+      
     </section>
   );
 }

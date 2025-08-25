@@ -14,6 +14,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Gallery() {
   const images = [
@@ -74,7 +80,7 @@ export default function Gallery() {
 
   return (
     <>
-    <section className="bg-gray-900 py-16" id="ismtf-gallery">
+    <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="ismtf-gallery">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
     ISMTF Vienna Gallery
@@ -104,7 +110,7 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-    <section className="bg-gray-900 py-16" id="sports-gallery">
+    <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="expo">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
       
@@ -136,7 +142,7 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-    <section className="bg-gray-900 py-16" id="sports-gallery">
+    <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="gallery">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
       
@@ -169,7 +175,7 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-    <section className="bg-gray-900 py-16" id="sports-gallery">
+    <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="gallery">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
       
@@ -201,7 +207,7 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-    <section className="bg-gray-900 py-16" id="sports-gallery">
+    <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="doe-gallery">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
       

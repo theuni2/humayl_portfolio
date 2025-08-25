@@ -68,6 +68,12 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function SportsSection() {
   const intro =
@@ -104,14 +110,14 @@ export default function SportsSection() {
   };
 
   return (
-    <section className="bg-gray-300 text-blue-950 py-8" id="sports">
+    <section className={`bg-[#d6d6d6]  py-8 ${ptSerif.className} `} id="sports">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-6 text-center border-b border-gray-700 pb-4"
+          className="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-950"
         >
           Sports & Competitions
         </motion.h2>
@@ -121,7 +127,7 @@ export default function SportsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-4xl mx-auto text-center text-gray-700 leading-relaxed mb-12"
+          className="max-w-4xl mx-auto text-center text-[#1a334c] leading-relaxed mb-12"
         >
           {intro}
         </motion.p>
@@ -130,14 +136,14 @@ export default function SportsSection() {
           {sports.map((sport, index) => (
             <motion.div
               key={sport.title}
-              className="border border-gray-200 p-6 rounded-xl hover:shadow-2xl transition-all duration-300 bg-white"
+              className="border border-gray-200 p-6 rounded-xl hover:shadow-2xl transition-all duration-300 bg-[#011e35]"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               custom={index}
             >
-              <h3 className="text-2xl font-semibold text-gray-700 text-center">
+              <h3 className="text-2xl font-semibold text-[#d6d6d6] text-center">
                 {sport.title}
               </h3>
 
@@ -153,7 +159,7 @@ export default function SportsSection() {
                 </div>
               </div>
 
-              <p className="mt-6 text-gray-700 text-justify">
+              <p className="mt-6 text-[#d6d6d6] text-justify">
                 {sport.details}
               </p>
             </motion.div>

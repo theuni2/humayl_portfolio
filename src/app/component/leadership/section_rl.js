@@ -54,12 +54,12 @@ useEffect(() => {
   return (
     <div>
       {/* Section 1 - Image Right */}
-      <section className="relative bg-gradient-to-b from-gray-50 to-white py-20">
+      <section className="relative  py-20">
         <div className="container mx-auto flex flex-col md:flex-row items-center px-5">
           
           {/* Text */}
           <div className="lg:flex-grow md:w-1/2 lg:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 text-center md:text-left animate-fadeIn">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div className="bg-[#011e35] p-8 rounded-2xl shadow-lg border border-gray-100">
               <h1 className="title-font sm:text-3xl text-2xl mb-6 font-bold text-indigo-700">
                 Co‑Founder – Physics in Motion Club
               </h1>

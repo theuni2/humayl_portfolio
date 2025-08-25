@@ -20,21 +20,23 @@ export default function Publications() {
         { label: "UK: View on Amazon", url: "https://amzn.to/3jbUNSm" },
         { label: "UAE: View on Amazon", url: "https://amzn.to/3eDlizo" },
       ],
-      image: "/image/2.PNG", // Replace with actual path
+      image: "/image/2.JPG", // Replace with actual path
     },    {
       title: "DC Hydraulics – Dubai College Engineering Magazine",
       description:
         "Chief Editor, Co-Founder, and contributor to DC Hydraulics, the Dubai College student-run engineering magazine. Responsibilities include setting editorial direction, coordinating with writers, and contributing articles. Since launch, the magazine has grown into a valued resource for the STEM community.",
       links: [
-        { label: "Volume 1 (PDF)", url: "https://drive.google.com/file/d/1a7HMMr-_P0pqopKeR7DAOCwuvUlgXCa3/view?usp=drive_link" },
-        { label: "Volume 2 (PDF)", url: "https://drive.google.com/file/d/1UlQfRW0oqtXw4BRz12g6B5TA3YORJ03Q/view?usp=drive_link" },
+        { label: "Volume 1 (PDF)", url: "/pdf/dc1.pdf" },
+        // { label: "Volume 1 (PDF)", url: "https://drive.google.com/file/d/1a7HMMr-_P0pqopKeR7DAOCwuvUlgXCa3/view?usp=drive_link" },
+        { label: "Volume 2 (PDF)", url: "/pdf/dc2.pdf" },
+        // { label: "Volume 2 (PDF)", url: "https://drive.google.com/file/d/1UlQfRW0oqtXw4BRz12g6B5TA3YORJ03Q/view?usp=drive_link" },
       ],
       image: "/image/dchydraulics.png", // Replace with actual path
     },
   ];
 
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className="bg-[#d6d6d6] py-16 px-6">
       <motion.h2
         className="text-3xl font-bold text-center mb-8 text-blue-950"
         initial={{ opacity: 0, y: 30 }}
@@ -49,7 +51,7 @@ export default function Publications() {
         {publications.map((pub, index) => (
           <motion.div
             key={index}
-            className="flex flex-col md:flex-row bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200"
+            className="flex flex-col md:flex-row bg-[#011e35] shadow-lg rounded-xl overflow-hidden border border-gray-200"
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -64,10 +66,10 @@ export default function Publications() {
               />
             </div>
             <div className="p-6 flex flex-col justify-center md:w-2/3">
-              <h3 className="text-xl font-semibold mb-3 text-black">
+              <h3 className="text-xl font-semibold mb-3 text-[#d6d6d6]">
                 {pub.title}
               </h3>
-              <p className="text-gray-700 mb-4">{pub.description}</p>
+              <p className="text-[#d6d6d6] mb-4">{pub.description}</p>
 
               {pub.links && (
                 <div className="flex flex-wrap gap-3">
@@ -77,7 +79,7 @@ export default function Publications() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-amber-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition"
+                      className="bg-[#1a334c] text-white px-4 py-2 rounded-lg shadow transition"
                     >
                       {link.label}
                     </a>

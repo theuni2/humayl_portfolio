@@ -3,6 +3,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Gallery() {
   const investInImages = [
@@ -38,9 +44,9 @@ export default function Gallery() {
   return (
     <>
       {/* InvestIN Gallery */}
-      <section className="bg-gray-900 py-16" id="sports-gallery">
+      <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="sports-gallery">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-d6d6d6 mb-10 border-b border-gray-700 pb-4">
             InvestIN Young Engineer Summer Experience Gallery
           </h2>
 
@@ -70,9 +76,9 @@ export default function Gallery() {
       </section>
 
       {/* Sarsan Aviation Gallery */}
-      <section className="bg-gray-900 py-16" id="sarsan-gallery">
+      <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="sarsan-gallery">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-300 pb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-300 pb-4">
             Sarsan Aviation Experience Gallery
           </h2>
 

@@ -180,3 +180,14 @@ for background: bg-gray-300
 for text: text-black
 for heding : blue-950
 for button : bg-amber-500
+
+
+
+text-[#5a5a5a]  for subheading
+<!-- text-[#6b6b6b]  for text -->
+text-gray-700
+for heading : blue-950
+ bg-[#d6d6d6]
+ <!-- 1a334c --> button color
+ 
+<!-- bg-[#011e35]  box-bg-color -->

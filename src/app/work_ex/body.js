@@ -99,6 +99,12 @@
 
 import React from 'react'
 import { motion } from "framer-motion";
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Body() {
   const experiences = [
@@ -153,7 +159,7 @@ export default function Body() {
   ];
 
   return (
-    <section className="py-10 px-6 md:px-20 bg-gray-300 ">
+    <section className={`py-10 px-6 md:px-20 bg-[#d6d6d6] ${ptSerif.className} `}>
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -171,14 +177,14 @@ export default function Body() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-[#011e35] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center gap-3 mb-2">
-                <img src={exp.logo} alt={exp.title} className="w-14 h-14 object-contain border-2 border-black rounded" />
-                <h3 className="text-xl font-semibold text-black">{exp.title}</h3>
+                <img src={exp.logo} alt={exp.title} className="w-14 h-14 object-contain border-2 border-gray-50" />
+                <h3 className="text-xl font-semibold text-[#d6d6d6]">{exp.title}</h3>
               </div>
               {/* <p className="text-sm mb-3 text-black">{exp.date}</p> */}
-              <p className="text-gray-700 mb-3">{exp.description}</p>
+              <p className="text-[#d6d6d6] mb-3">{exp.description}</p>
               {exp.photos && (
                 <div className="w-full h-40 bg-gray-700 rounded-xl flex items-center justify-center text-gray-400">
                   [Add Photos Here]

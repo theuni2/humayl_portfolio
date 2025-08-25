@@ -3,6 +3,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 // --- Simple lightbox for per-project gallery ---
 function GalleryModal({ open, onClose, images, startIndex = 0, caption }) {
@@ -28,7 +34,7 @@ function GalleryModal({ open, onClose, images, startIndex = 0, caption }) {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4"
+        className={`fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4 ${ptSerif.className} `}
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
         onClick={onClose}
       >
@@ -148,22 +154,21 @@ export default function ProjectsDetails() {
     },
     {
       id: "epq-euler",
-      title: "Extended Project Qualification — Euler’s Formula",
+      title: "Extended Project Qualification — EPQ",
       cover: "/image/euler.png",
       gallery: [
         // "/projects/epq-euler/cover.jpg",
         // "/projects/epq-euler/math.jpg",
         // "/projects/epq-euler/modes.jpg",
       ],
-      blurb:
-        "Research on applying Euler’s Formula to vibrational modes and natural frequencies in mechanical structures.",
-      body: [
-        "Took on a topic that combines advanced mathematics with practical engineering: analyzing vibrational modes and natural frequencies, and investigating the derivation behind Euler’s Formula.",
-        "Read university-level papers, built proofs, and linked results to mechanical engineering principles to predict structural behavior under stress.",
-        "The project also strengthened planning, self-discipline, and independent research skills.",
-      ],
-      chips: ["Mathematics", "Structures", "Research Writing"],
-    },
+      blurb: "A dissertation investigating how varying airfoil shapes influence lift and drag across subsonic and supersonic flight conditions.",
+  body: [
+    "Conducted an in-depth exploration of aerodynamic principles, focusing on the impact of airfoil geometry on aircraft performance in different flight regimes.",
+    "Integrated mathematical modeling, aerodynamic simulations, and comparative analysis to evaluate subsonic versus supersonic conditions.",
+    "Emphasized critical evaluation, structured problem-solving, and technical writing aligned with university-level research standards.",
+    "The work strengthened independent inquiry, data analysis, and research communication skills while offering insights into design trade-offs faced by aerospace engineers.",
+  ],
+  chips: ["Aerodynamics", "Applied Physics", "Research Writing"],    },
   ];
 
   // Modal state
@@ -178,7 +183,7 @@ export default function ProjectsDetails() {
   };
 
   return (
-    <section id="projects-details" className="py-16 bg-gray-50">
+    <section id="projects-details" className={`py-16 bg-[#d6d6d6] ${ptSerif.className} `}>
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <motion.h2
           variants={reveal}
@@ -236,13 +241,13 @@ export default function ProjectsDetails() {
               </div>
 
               <div className="flex flex-col">
-                <h3 className="text-2xl font-bold text-black">{p.title}</h3>
+                <h3 className="text-2xl font-bold text-[#5a5a5a]">{p.title}</h3>
                 <p className="mt-2 text-gray-700">{p.blurb}</p>
 
                 <ul className="mt-4 space-y-3 text-gray-700 leading-relaxed">
   {p.body.map((para, idx) => (
     <li key={idx} className="flex gap-3">
-      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black"></span>
+      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#5a5a5a]"></span>
       <p>{para}</p>
     </li>
   ))}
@@ -252,6 +257,28 @@ export default function ProjectsDetails() {
                 {/* Links / actions */}
                 {
                     p.gallery.length>0?   <div className="mt-5 flex flex-wrap items-center gap-3">
+                      <a href='/awards#expo'>
+                  <button
+                    
+                    className="rounded-xl border border-gray-300 px-4 py-2 text-sm font-medium hover:shadow transition bg-[#1a334c]"
+                  >
+                    View Gallery
+                  </button>
+</a>
+                  {/* {p.linkHref && (
+                    <a
+                      href={p.linkHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-xl bg-black px-4 py-2 text-sm font-medium text-white hover:bg-gray-800"
+                    >
+                      {p.linkLabel || "External Link"}
+                    </a>
+                  )} */}
+                </div> :""
+                }
+                {/* {
+                    p.gallery.length>0?   <div className="mt-5 flex flex-wrap items-center gap-3">
                   <button
                     onClick={() => {
                       setImages(p.gallery);
@@ -259,7 +286,7 @@ export default function ProjectsDetails() {
                       setCaption(p.title);
                       setOpen(true);
                     }}
-                    className="rounded-xl border border-gray-300 px-4 py-2 text-sm font-medium hover:shadow transition bg-amber-500"
+                    className="rounded-xl border border-gray-300 px-4 py-2 text-sm font-medium hover:shadow transition bg-[#1a334c]"
                   >
                     View Gallery
                   </button>
@@ -275,7 +302,7 @@ export default function ProjectsDetails() {
                     </a>
                   )}
                 </div> :""
-                }
+                } */}
              
 
                 {/* Thumbs */}

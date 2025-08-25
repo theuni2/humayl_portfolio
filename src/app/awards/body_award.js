@@ -112,6 +112,12 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Achievements() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -247,10 +253,10 @@ const categories = [
   let count = 0; // to uniquely index items across categories
 
   return (
-  <section className="bg-white py-14 px-6 md:px-20 flex flex-col md:flex-row items-center md:items-center gap-10">
+  <section className={`bg-[#d6d6d6] py-14 px-6 md:px-20 flex flex-col md:flex-row items-center md:items-center gap-10 ${ptSerif.className} `}>
   {/* Left Column */}
   <div className="w-full md:w-1/3 flex flex-col items-center">
-    <h2 className="text-4xl font-bold italic text-blue-950 mb-6 text-center">
+    <h2 className="text-4xl font-bold  text-blue-950 mb-6 text-center">
       Awards & Achievements
     </h2>
 
@@ -266,7 +272,7 @@ const categories = [
       href="https://www.linkedin.com/in/your-profile"
       target="_blank"
       rel="noopener noreferrer"
-      className="mb-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-4 rounded transition duration-300 w-full text-center md:w-auto"
+      className="mb-4 bg-[#1a334c] text-white font-semibold py-2 px-4 rounded transition duration-300 w-full text-center md:w-auto"
     >
       Visit LinkedIn For More Information
     </a>
@@ -276,7 +282,7 @@ const categories = [
   <div className="w-full md:w-2/3">
     {categories.map((cat, cIdx) => (
       <div key={cIdx} className="mb-6">
-        <h3 className="text-2xl font-bold text-blue-900 mb-3 pb-2">
+        <h3 className="text-2xl font-bold text-[#1a334c] mb-3 pb-2">
           {cat.category}
         </h3>
         {cat.items.map((item, iIdx) => {
@@ -284,10 +290,10 @@ const categories = [
           return (
             <div key={iIdx} className="border-t border-gray-300 py-3">
               <button
-                className="w-full text-left font-semibold text-black focus:outline-none flex justify-between items-center"
+                className="w-full text-left font-semibold text-[#28476b] focus:outline-none flex justify-between items-center"
                 onClick={() => toggleExpand(currentIndex)}
               >
-                <span className="italic">{item.title}</span>
+                <span className="">{item.title}</span>
                 <span className="text-xl font-bold">
                   {expandedIndex === currentIndex ? '–' : '+'}
                 </span>

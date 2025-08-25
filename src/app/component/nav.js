@@ -136,6 +136,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // icons
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -165,7 +172,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all ${ptSerif.className} duration-300 ${
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
