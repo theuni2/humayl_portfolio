@@ -25,7 +25,7 @@ export default function CoreValues() {
   ];
 
   return (
-    <section className="py-16 px-6 md:px-20 bg-gray-300">
+    <section className="py-16 px-6 md:px-20 bg-[#d6d6d6]">
       <div className="max-w-6xl mx-auto text-center">
         {/* text-3xl md:text-4xl font-bold mb-6 text-blue-950 */}
         <h2 className={`text-3xl md:text-4xl text-blue-950 font-bold tracking-wide mb-4 ${ptSerif.className} `}>

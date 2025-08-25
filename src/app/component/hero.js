@@ -7,7 +7,7 @@ const ptSerif = PT_Serif({
 
 export default function AboutMe() {
   return (
-    <section className={`py-16 px-6 md:px-20 bg-gray-300 ${ptSerif.className}`}>
+    <section className={`py-16 px-6 md:px-20 bg-[#d6d6d6] ${ptSerif.className}`}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
         
         {/* Left: Text */}
