@@ -43,7 +43,7 @@ export default function Gallery() {
   };
 
   return (
-    <section className={`bg-[#1a334c] py-16  ${ptSerif.className} `} id="sports-gallery ">
+    <section className={` bg-[#011e35] py-16  ${ptSerif.className} `} id="sports-gallery ">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
           Sports Gallery
