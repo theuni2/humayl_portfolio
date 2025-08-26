@@ -2,6 +2,16 @@
 
 import { motion } from "framer-motion";
 
+// import Navbar from "./nav";
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // optional weights
+});
+
+
+
 export default function Publications() {
   const publications = [
     {
@@ -36,7 +46,7 @@ export default function Publications() {
   ];
 
   return (
-    <section className="bg-[#d6d6d6] py-16 px-6">
+    <section className={`bg-[#d6d6d6] py-16 px-6 ${ptSerif.className} `}>
       <motion.h2
         className="text-3xl font-bold text-center mb-8 text-blue-950"
         initial={{ opacity: 0, y: 30 }}
