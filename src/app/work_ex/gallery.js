@@ -21,10 +21,10 @@ export default function Gallery() {
   ];
 
   const sarsanImages = [
-    { src: '/image/sarsan/img1.JPEG', alt: 'sarsan img 1' },
-    { src: '/image/sarsan/img2.JPEG', alt: 'sarsan img 2' },
-    { src: '/image/sarsan/img3.JPEG', alt: 'sarsan img 3' },
-    { src: '/image/sarsan/img4.JPEG', alt: 'sarsan img 4' },
+    { src: '/image/sarsan/img1.jpeg', alt: 'sarsan img 1' },
+    { src: '/image/sarsan/img2.jpeg', alt: 'sarsan img 2' },
+    { src: '/image/sarsan/img3.jpeg', alt: 'sarsan img 3' },
+    { src: '/image/sarsan/img4.jpeg', alt: 'sarsan img 4' },
   ];
 
   const sarsanVideos = [
@@ -46,7 +46,7 @@ export default function Gallery() {
       {/* InvestIN Gallery */}
       <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="sports-gallery">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-d6d6d6 mb-10 border-b border-gray-700 pb-4">
+          <h2 className={`text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4  ${ptSerif.className} `}>
             InvestIN Young Engineer Summer Experience Gallery
           </h2>
 
@@ -54,7 +54,7 @@ export default function Gallery() {
             {investInImages.map((img, index) => (
               <motion.div
                 key={index}
-                className="relative overflow-hidden rounded-xl shadow-lg"
+                className="relative overflow-hidden rounded-lg shadow-lg"
                 variants={imgVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -87,7 +87,7 @@ export default function Gallery() {
             {sarsanImages.map((img, index) => (
               <motion.div
                 key={index}
-                className="relative overflow-hidden rounded-xl shadow-lg"
+                className="relative overflow-hidden rounded-lg shadow-lg"
                 variants={imgVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -110,7 +110,7 @@ export default function Gallery() {
             {sarsanVideos.map((video, index) => (
               <motion.div
                 key={`video-${index}`}
-                className="relative overflow-hidden rounded-xl shadow-lg"
+                className="relative overflow-hidden rounded-lg shadow-lg"
                 variants={imgVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -120,7 +120,7 @@ export default function Gallery() {
               >
                 <video
                   controls
-                  className="w-full h-64 object-cover rounded-xl"
+                  className="w-full h-64 object-cover rounded-lg"
                 >
                   <source src={video.src} type="video/mp4" />
                   Your browser does not support the video tag.

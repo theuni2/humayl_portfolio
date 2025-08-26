@@ -222,7 +222,7 @@ export default function ProjectsDetails() {
             >
               {/* Alternate image/text sides */}
               <div className={`${i % 2 === 0 ? "" : "md:order-2"}`}>
-                <div className="group relative h-64 sm:h-80 md:h-full overflow-hidden rounded-2xl shadow-lg">
+                <div className="group relative h-64 sm:h-80 md:h-full overflow-hidden rounded-lg shadow-lg">
                   <Image
                     src={p.cover}
                     alt={p.title}
@@ -260,7 +260,7 @@ export default function ProjectsDetails() {
                       <a href='/awards#expo'>
                   <button
                     
-                    className="rounded-xl border border-gray-300 px-4 py-2 text-sm font-medium hover:shadow transition bg-[#1a334c]"
+                    className="rounded-xl border border-gray-300 px-4 py-2 text-sm text-[#1a334c] font-bold hover:shadow transition bg-[#eccc93]"
                   >
                     View Gallery
                   </button>

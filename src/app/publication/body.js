@@ -51,7 +51,7 @@ export default function Publications() {
         {publications.map((pub, index) => (
           <motion.div
             key={index}
-            className="flex flex-col md:flex-row bg-[#011e35] shadow-lg rounded-xl overflow-hidden border border-gray-200"
+            className="flex flex-col md:flex-row bg-[#011e35] shadow-lg rounded-lg overflow-hidden border border-gray-200"
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -79,7 +79,7 @@ export default function Publications() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#1a334c] text-white px-4 py-2 rounded-lg shadow transition"
+                      className="bg-[#eccc93] text-[#1a334c] font-bold px-4 py-2 rounded-lg shadow transition"
                     >
                       {link.label}
                     </a>

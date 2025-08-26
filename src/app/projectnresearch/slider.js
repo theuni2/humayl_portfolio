@@ -52,10 +52,10 @@ export default function Slider() {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
-                <h2 className={`text-white my-1 text-3xl md:text-4xl font-extrabold drop-shadow-lg ${ptSerif.className} `}>
+                <h2 className={`text-[#d6d6d6] my-1 text-3xl md:text-4xl font-extrabold drop-shadow-lg ${ptSerif.className} `}>
                   {slide.text}
                 </h2>
-                <p className={`text-white text-2xl md:text-3xl font-bold ${ptSerif.className} `}>
+                <p className={`text-[#d6d6d6] text-2xl md:text-3xl font-bold ${ptSerif.className} `}>
                     {slide.para}
                 </p>
               </div>

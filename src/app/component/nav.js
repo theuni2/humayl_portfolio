@@ -173,14 +173,14 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all ${ptSerif.className} duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
+        scrolled ? "bg-[#d6d6d6] shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-8 py-4">
         {/* Brand */}
         <div
           className={`font-bold text-lg ${
-            scrolled ? "text-blue-950" : "text-white"
+            scrolled ? "text-blue-950" : "text-[#d6d6d6]"
           }`}
         >
           Humayl Fazal
@@ -194,8 +194,8 @@ export default function Navbar() {
               href={item.href}
               className={`text-sm font-medium tracking-wide transition-colors ${
                 scrolled
-                  ? "text-black hover:text-gray-600"
-                  : "text-white hover:text-gray-200"
+                  ? "text-blue-950 hover:text-gray-600"
+                  : "text-[#d6d6d6] hover:text-gray-200"
               } ${
                 item.label === "HOME" && scrolled
                   ? "border border-black px-3 py-1"
@@ -224,7 +224,7 @@ export default function Navbar() {
       {isOpen && (
         <div
           className={`md:hidden transition-all duration-300 ${
-            scrolled ? "bg-white" : "bg-black/80"
+            scrolled ? "bg-[#d6d6d6]" : "bg-black/80"
           }`}
         >
           <div className="flex flex-col space-y-4 px-6 py-4">

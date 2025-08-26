@@ -2,6 +2,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // for hamburger & close icons
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,10 +23,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full bg-white shadow-md  top-0 left-0 ">
+    <nav className="w-full bg-[#d6d6d6] shadow-md  top-0 left-0 ">
       <div className="container mx-auto flex justify-between items-center px-6 md:px-12 py-4">
         {/* Brand */}
-        <div className="font-bold text-lg text-blue-950">Humayl Fazal</div>
+        <div className={` font-bold text-lg text-blue-950  ${ptSerif.className} `}>Humayl Fazal</div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
@@ -28,7 +34,7 @@ export default function Navbar() {
             <Link
               key={index}
               href={item.href}
-              className="text-sm font-medium tracking-wide text-black hover:text-gray-600 transition-colors"
+              className={`text-sm font-medium tracking-wide text-[#1a334c] hover:text-gray-600 transition-colors ${ptSerif.className} `}
             >
               {item.label}
             </Link>
@@ -46,13 +52,13 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-[#d6d6d6] shadow-lg">
           <div className="flex flex-col space-y-4 px-6 py-4">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className="text-sm font-medium tracking-wide text-black hover:text-gray-600 transition-colors"
+                className="text-sm font-medium tracking-wide text-[#1a334c] hover:text-gray-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

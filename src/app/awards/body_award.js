@@ -157,7 +157,7 @@ const categories = [
           "Ranked in the top 10% globally in the team round of Stanford University’s International Math Tournament. Demonstrated advanced problem-solving, logical reasoning, and collaborative skills under timed conditions, competing alongside top math students from around the world."
       },
       {
-        title: "STEM Challenge 2025 – Curtin University & Lab of Future (Photos: Stem Competition 2025)",
+        title: "STEM Challenge 2025 – Curtin University & Lab of Future",
         description:
           "Represented Dubai College in the STEM Challenge 2025, hosted by Curtin University in partnership with Lab of the Future, and placed among the Top 30 teams. The competition tested participants’ ability to solve real-world STEM problems under tight deadlines, requiring innovative thinking, rapid prototyping, and effective teamwork. This achievement reflects both technical expertise and the ability to collaborate efficiently in a high-pressure, competitive environment."
       },
@@ -253,10 +253,69 @@ const categories = [
   let count = 0; // to uniquely index items across categories
 
   return (
-  <section className={`bg-[#d6d6d6] py-14 px-6 md:px-20 flex flex-col md:flex-row items-center md:items-center gap-10 ${ptSerif.className} `}>
+//   <section className={`bg-[#d6d6d6] py-14 px-6 md:px-20 flex flex-col md:flex-row items-center md:items-center gap-10 ${ptSerif.className} `}>
+//   {/* Left Column */}
+//   <div className="w-full md:w-1/3 flex flex-col items-center">
+//     <h2 className="text-4xl font-bold  text-blue-950 mb-6 text-center">
+//       Awards & Achievements
+//     </h2>
+
+//     <Image
+//       src="/image/him.jpg"
+//       alt="Profile Image"
+//       width={250}
+//       height={250}
+//       className="rounded-md mx-auto my-2"
+//     />
+
+//     <a
+//       href="https://www.linkedin.com/in/your-profile"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       className="mb-4 bg-[#1a334c] text-white font-semibold py-2 px-4 rounded transition duration-300 w-full text-center md:w-auto"
+//     >
+//       Visit LinkedIn For More Information
+//     </a>
+//   </div>
+
+//   {/* Right Column */}
+//   <div className="w-full md:w-2/3">
+//     {categories.map((cat, cIdx) => (
+//       <div key={cIdx} className="mb-6">
+//         <h3 className="text-2xl font-bold text-[#1a334c] mb-3 pb-2">
+//           {cat.category}
+//         </h3>
+//         {cat.items.map((item, iIdx) => {
+//           const currentIndex = count++;
+//           return (
+//             <div key={iIdx} className="border-t border-gray-300 py-3">
+//               <button
+//                 className="w-full text-left font-semibold text-[#28476b] focus:outline-none flex justify-between items-center"
+//                 onClick={() => toggleExpand(currentIndex)}
+//               >
+//                 <span className="">{item.title}</span>
+//                 <span className="text-xl font-bold">
+//                   {expandedIndex === currentIndex ? '–' : '+'}
+//                 </span>
+//               </button>
+//               {expandedIndex === currentIndex && (
+//                 <p className="mt-2 text-sm text-gray-700">
+//                   {item.description}
+//                 </p>
+//               )}
+//             </div>
+//           );
+//         })}
+//       </div>
+//     ))}
+//   </div>
+// </section>
+<section
+  className={`bg-[#d6d6d6] py-14 px-6 md:px-20 flex flex-col md:flex-row items-start gap-10 ${ptSerif.className}`}
+>
   {/* Left Column */}
-  <div className="w-full md:w-1/3 flex flex-col items-center">
-    <h2 className="text-4xl font-bold  text-blue-950 mb-6 text-center">
+  <div className="w-full md:w-1/3 flex flex-col items-start">
+    <h2 className="text-4xl font-bold text-blue-950 mb-6 text-center">
       Awards & Achievements
     </h2>
 
@@ -265,16 +324,24 @@ const categories = [
       alt="Profile Image"
       width={250}
       height={250}
-      className="rounded-md mx-auto my-2"
+      className="rounded-lg my-2 mx-auto"
     />
 
     <a
-      href="https://www.linkedin.com/in/your-profile"
+      href="https://www.linkedin.com/in/humayl-fazal-3b1a11240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
       target="_blank"
       rel="noopener noreferrer"
-      className="mb-4 bg-[#1a334c] text-white font-semibold py-2 px-4 rounded transition duration-300 w-full text-center md:w-auto"
+      className="mb-4 bg-[#eccc93] mx-auto text-[#1a334c] font-semibold py-2 px-4 rounded-xl transition duration-300 w-full md:w-auto"
     >
-      Visit LinkedIn For More Information
+      Connect with me on LinkedIn
+    </a>
+    <a
+      href="https://www.linkedin.com/in/humayl-fazal-3b1a11240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mb-4 bg-[#eccc93] mx-auto text-[#1a334c] font-semibold py-2 px-4 rounded-xl transition duration-300 w-full md:w-auto"
+    >
+     Download my Resume (PDF)
     </a>
   </div>
 
@@ -293,15 +360,13 @@ const categories = [
                 className="w-full text-left font-semibold text-[#28476b] focus:outline-none flex justify-between items-center"
                 onClick={() => toggleExpand(currentIndex)}
               >
-                <span className="">{item.title}</span>
+                <span>{item.title}</span>
                 <span className="text-xl font-bold">
                   {expandedIndex === currentIndex ? '–' : '+'}
                 </span>
               </button>
               {expandedIndex === currentIndex && (
-                <p className="mt-2 text-sm text-gray-700">
-                  {item.description}
-                </p>
+                <p className="mt-2 text-sm text-gray-700">{item.description}</p>
               )}
             </div>
           );

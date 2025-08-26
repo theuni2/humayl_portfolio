@@ -1,9 +1,15 @@
 // components/Footer.jsx
 import Link from "next/link";
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 text-gray-600 body-font">
+    <footer className="bg-[#d6d6d6] border-t border-gray-200 text-blue-950 body-font">
       <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
         
         {/* Logo + Name */}
@@ -23,7 +29,7 @@ export default function Footer() {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span className="ml-2 text-lg font-semibold text-blue-950">Humayl Fazal</span>
+          <span className={`ml-2 text-lg font-semibold text-blue-950 ${ptSerif.className} `}>Humayl Fazal</span>
         </Link>
 
         {/* Copyright */}
@@ -35,7 +41,7 @@ export default function Footer() {
         {/* Social Icons */}
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-3">
         
-          <Link href="#" className="text-gray-500 hover:text-indigo-600 transition">
+          <Link href="https://www.linkedin.com/in/humayl-fazal-3b1a11240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="text-gray-500 hover:text-indigo-600 transition">
             {/* LinkedIn */}
             <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0"
               className="w-5 h-5" viewBox="0 0 24 24">

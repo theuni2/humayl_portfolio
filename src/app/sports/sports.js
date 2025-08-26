@@ -136,7 +136,7 @@ export default function SportsSection() {
           {sports.map((sport, index) => (
             <motion.div
               key={sport.title}
-              className="border border-gray-200 p-6 rounded-xl hover:shadow-2xl transition-all duration-300 bg-[#011e35]"
+              className="border border-gray-200 p-6 rounded-lg hover:shadow-2xl transition-all duration-300 bg-[#011e35]"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"

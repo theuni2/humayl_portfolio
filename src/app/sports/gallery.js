@@ -14,6 +14,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { PT_Serif } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add weights you’ll use
+});
 
 export default function Gallery() {
   const images = [
@@ -37,9 +43,9 @@ export default function Gallery() {
   };
 
   return (
-    <section className="bg-[#1a334c] py-16" id="sports-gallery">
+    <section className={`bg-[#1a334c] py-16  ${ptSerif.className} `} id="sports-gallery ">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[d6d6d6] mb-10 border-b border-gray-700 pb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
           Sports Gallery
         </h2>
 
@@ -47,7 +53,7 @@ export default function Gallery() {
           {images.map((img, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-xl shadow-lg"
+              className="relative overflow-hidden rounded-lg shadow-lg"
               variants={imgVariants}
               initial="hidden"
               whileInView="visible"

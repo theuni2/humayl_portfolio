@@ -26,7 +26,7 @@ export default function Gallery() {
     { src: '/image/ismtf/img1.JPEG', alt: 'ISMTF' },
     { src: '/image/ismtf/img2.JPEG', alt: 'ISMTF' },
     { src: '/image/ismtf/img3.JPEG', alt: 'ISMTF' },
-    { src: '/image/ismtf/img4.JPG',  alt: 'ISMTF' },
+    // { src: '/image/ismtf/img4.JPG',  alt: 'ISMTF' },
     { src: '/image/ismtf/img5.JPEG', alt: 'ISMTF' },
     { src: '/image/ismtf/img6.JPEG', alt: 'ISMTF' },
     // { src: '/images/polo.jpg', alt: 'Water polo match' },
@@ -67,6 +67,11 @@ export default function Gallery() {
     { src: '/image/rubric/img6.jpg', alt: 'Rover' },
     // { src: '/images/polo.jpg', alt: 'Water polo match' },
   ];
+  const stem = [
+    { src: '/image/stem2025/img1.JPG', alt: 'STEM 2025' },
+    { src: '/image/stem2025/img2.JPG', alt: 'STEM 2025' },
+    
+  ];
 
 
   const imgVariants = {
@@ -80,9 +85,10 @@ export default function Gallery() {
 
   return (
     <>
+
     <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="ismtf-gallery">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
     ISMTF Vienna Gallery
         </h2>
 
@@ -90,7 +96,7 @@ export default function Gallery() {
           {images.map((img, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-xl shadow-lg"
+              className="relative overflow-hidden rounded-lg shadow-lg"
               variants={imgVariants}
               initial="hidden"
               whileInView="visible"
@@ -112,7 +118,7 @@ export default function Gallery() {
     </section>
     <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="expo">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
       
                     Expo 2020 Innovator Competition Gallery
 
@@ -122,7 +128,7 @@ export default function Gallery() {
           {rover.map((img, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-xl shadow-lg"
+              className="relative overflow-hidden rounded-lg shadow-lg"
               variants={imgVariants}
               initial="hidden"
               whileInView="visible"
@@ -144,7 +150,7 @@ export default function Gallery() {
     </section>
     <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="gallery">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
       
                     Rubik’s Cube Solver Gallery 
 
@@ -154,7 +160,7 @@ export default function Gallery() {
           {rubric.map((img, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-xl shadow-lg"
+              className="relative overflow-hidden rounded-lg shadow-lg"
               variants={imgVariants}
               initial="hidden"
               whileInView="visible"
@@ -175,41 +181,45 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-    <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="gallery">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
-      
-                   KenKen Competitions Gallery
+    {/* kenken */}
+   <section className={`bg-[#011e35] py-16 ${ptSerif.className}`} id="gallery">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
+      KenKen Competitions Gallery
+    </h2>
 
-        </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {kenken.map((img, index) => (
+       <motion.div
+  key={index}
+  className="relative overflow-hidden rounded-lg shadow-lg"
+  variants={imgVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  custom={index}
+  whileHover={{ scale: 1.03 }}
+>
+  <div className="rounded-xl border-2 border-blue-950 bg-[#d6d6d6]">
+    <Image
+      src={img.src}
+      alt={img.alt}
+      width={600}
+      height={400}
+      className="object-contain w-full h-64 rounded-xl"
+    />
+  </div>
+</motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {kenken.map((img, index) => (
-            <motion.div
-              key={index}
-              className="relative overflow-hidden rounded-xl shadow-lg"
-              variants={imgVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={index}
-              whileHover={{ scale: 1.03 }}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                width={600}
-                height={400}
-                className="object-cover w-full h-64"
-              />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
     <section className={`bg-[#011e35] py-16 ${ptSerif.className} `} id="doe-gallery">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 border-b border-gray-700 pb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
       
                    Duke of Edinburgh Awards (Bronze, Silver & Gold)
 
@@ -220,7 +230,7 @@ export default function Gallery() {
           {doe.map((img, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-xl shadow-lg"
+              className="relative overflow-hidden rounded-lg shadow-lg"
               variants={imgVariants}
               initial="hidden"
               whileInView="visible"
@@ -241,7 +251,37 @@ export default function Gallery() {
       </div>
     </section>
     
-    
+    <section className={`bg-[#011e35] py-16 ${ptSerif.className}`} id="stem-gallery">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
+      STEM Challenge 2025
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {stem.map((img, index) => (
+        <motion.div
+          key={index}
+          className="relative overflow-hidden rounded-lg shadow-lg"
+          variants={imgVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={index}
+          whileHover={{ scale: 1.03 }}
+        >
+          <Image
+            src={img.src}
+            alt={img.alt}
+            width={600}
+            height={800}
+            className="object-fit w-full h-100 rounded-lg"
+          />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
     </>
   );
 }

@@ -82,10 +82,10 @@ export default function LeadershipSection() {
           <motion.article
             key={role.title}
             variants={item}
-            className="group relative overflow-hidden rounded-2xl bg-[#011e35] border border-gray-200 shadow-sm hover:shadow-xl transition-shadow"
+            className="group relative overflow-hidden rounded-lg bg-[#011e35] border border-gray-200 shadow-sm hover:shadow-xl transition-shadow"
           >
             {/* Animated accent bar */}
-            <div className="h-1 w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600" />
+            <div className="h-1 w-full bg-gradient-to-r from-[#eccc93] via-[#eccc96] to-[#eccc99]" />
 
             <div className="p-6">
               <h3 className={`text-lg md:text-xl font-semibold text-[#d6d6d6] ${ptSerif.className} `}>
