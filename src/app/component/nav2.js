@@ -58,7 +58,7 @@ export default function Navbar() {
               <Link
                 key={index}
                 href={item.href}
-                className="text-sm font-medium tracking-wide text-[#1a334c] hover:text-gray-600 transition-colors"
+                className={`text-sm font-medium tracking-wide text-[#1a334c] hover:text-gray-600 transition-colors ${ptSerif.className} `}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
