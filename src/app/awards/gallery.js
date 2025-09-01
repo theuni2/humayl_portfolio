@@ -251,7 +251,7 @@ export default function Gallery() {
       </div>
     </section>
     
-    <section className={`bg-[#011e35] py-16 ${ptSerif.className}`} id="stem-gallery">
+    {/* <section className={`bg-[#011e35] py-16 ${ptSerif.className}`} id="stem-gallery">
   <div className="max-w-7xl mx-auto px-6">
     <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
       STEM Challenge 2025
@@ -276,6 +276,39 @@ export default function Gallery() {
             height={800}
             className="object-fit w-full h-100 rounded-lg"
           />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section> */}
+
+
+<section className={`bg-[#011e35] py-16 ${ptSerif.className}`} id="stem-gallery">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6d6d6] mb-10 border-b border-gray-700 pb-4">
+      STEM Challenge 2025
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {stem.map((img, index) => (
+        <motion.div
+          key={index}
+          className="relative overflow-hidden rounded-lg shadow-lg"
+          variants={imgVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={index}
+          whileHover={{ scale: 1.03 }}
+        >
+          <div className="relative w-full aspect-[3/4]"> 
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
         </motion.div>
       ))}
     </div>

@@ -336,12 +336,12 @@ const categories = [
       Connect with me on LinkedIn
     </a>
     <a
-      href="https://www.linkedin.com/in/humayl-fazal-3b1a11240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+      href="/pdf/Resume.docx"
       target="_blank"
       rel="noopener noreferrer"
       className="mb-4 bg-[#eccc93] mx-auto text-[#1a334c] font-semibold py-2 px-4 rounded-lg transition duration-300 w-full md:w-auto"
     >
-     Download my Resume (PDF)
+     Download my Resume
     </a>
   </div>
 

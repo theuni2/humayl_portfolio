@@ -82,7 +82,7 @@ export default function Home() {
         {/* Buttons */}
         <div className="mt-6 flex gap-4">
           <a
-            href="/Humayl-Resume.pdf"
+            href="/pdf/Resume.docx"
             download
             className="px-6 py-3 bg-[#eccc93] text-[#1a334c] rounded-xl shadow-lg hover:bg-[#eccc99] font-bold transition"
           >
